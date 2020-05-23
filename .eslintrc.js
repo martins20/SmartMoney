@@ -1,12 +1,16 @@
 module.exports = {
   env: {
-    browser: true,
     es6: true,
   },
-  extends: ['plugin:react/recommended', 'airbnb', 'prettier', 'prettier/react'],
+  extends: [
+    'airbnb',
+    'prettier',
+    'prettier/react'
+  ],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
+    __DEV__: 'readonly'
   },
   parser: 'babel-eslint',
   parserOptions: {
@@ -16,19 +20,24 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: ['react', 'prettier', 'react-hooks'],
+  plugins: [
+    'react',
+    'prettier'
+  ],
   rules: {
-    'prettier/pretier': 'error',
-    'react/jsx-filename-extension': 0,
-    'import/prefer-default-export': 0,
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
-    'no-case-declarations': 0,
-    'no-unused-vars': 0,
-    'prettier/pretier': 0,
-    'no-console': 0,
-    'jsx-a11y/label-has-associated-control': 0,
-    'react-hooks/exhaustive-deps': 0,
-    'react/prop-types': 0
+    'prettier/prettier': 'error',
+    'react/jsx-filename-extension': [
+      'warn',
+      {
+        extensions: ['.jsx', '.js']
+      }
+    ],
+    'import/prefer-default-export': 'off',
+    'react/state-in-constructor': 'off',
+    'react/static-property-placement': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    'react/prop-types': 'off',
+    'no-param-reassign': 'off',
+    'no-console': 'off'
   },
 };
