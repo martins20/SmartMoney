@@ -4,9 +4,7 @@
 
 import {AppRegistry} from 'react-native';
 import App from './src/App';
-import Main from './src/Pages/Main';
-import NewEntry from './src/Pages/NewEntry';
-import Report from './src/Pages/Report';
+
 import {name as appName} from './app.json';
 
 if (__DEV__) {
@@ -15,4 +13,4 @@ if (__DEV__) {
   );
 }
 
-AppRegistry.registerComponent(appName, () => Report);
+AppRegistry.registerComponent(appName, () => App);
