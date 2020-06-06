@@ -1,12 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {View, StyleSheet, TextInput, Button} from 'react-native';
 
 import BalaceLabel from '../../components/BalanceLabel';
 
 const NewEntry = ({navigation}) => {
+  const [currentBalance, setCurretBalace] = useState(2064.35);
+
   return (
     <View style={styles.container}>
-      <BalaceLabel />
+      <BalaceLabel currentBalance={currentBalance} />
 
       <View>
         <TextInput style={styles.input} />

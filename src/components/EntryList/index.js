@@ -1,22 +1,19 @@
 import React from 'react';
 import {View, Text, FlatList, StyleSheet} from 'react-native';
 
-import EntryListItem from './EntryListItem';
-
-const EntryList = () => {
-  const data = [
-    {key: 'Padaria Asa Branca: $210'},
-    {key: 'Supermercado: $190'},
-    {key: 'Posto Ipiranga: $190'},
-  ];
-
+const EntryList = ({lastEntries}) => {
   return (
     <View styles={styles.container}>
       <Text style={styles.title}>Últimos Lançamentos</Text>
 
       <FlatList
-        data={data}
-        renderItem={({item}) => <Text>{item.key}</Text>}></FlatList>
+        data={lastEntries}
+        renderItem={({item}) => (
+          <Text>
+            {item.description} - ${item.amount}
+          </Text>
+        )}
+      />
     </View>
   );
 };

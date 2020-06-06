@@ -32,5 +32,7 @@ module.exports = {
     'react/prop-types': 'off',
     'no-param-reassign': 'off',
     'no-console': 'off',
+    'no-use-before-define': 'off',
+    'no-unused-expressions': 'off',
   },
 };
